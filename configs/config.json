@@ -1,8 +1,8 @@
 {
-    "prefix": ">",     
+    "prefix": "",     
     "embedcolor": "#ff0000", 
     "dev": "736977089307345004",       
-    "token": "NzY3MjIzOTMyODg0MzUzMDQ0.X4uy9w.ON1-XGXXp242JBzN1X48YttXI9o",
-    "api": "AIzaSyC5S5zY4od9NagaN9fMReG5wJkY1IMz0rY",      
-    "AME_API": "8428879cb2b45d90d501ca689d3a6a6d46261721e6d0127fa8e83ae3954fb531d29b9ae09886e30833364330494e6234174b973feab81e8b269c0377c670657c"     
+    "token": "",
+    "api": "",      
+    "AME_API": ""     
 }
