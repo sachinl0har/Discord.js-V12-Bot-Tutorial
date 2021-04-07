@@ -1,14 +1,15 @@
 # Discord.js-Tutorial
 
-One Paragraph of project description goes here
+Here is a Discord.js Bot Tutorial.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+For Getting Started you should atleast have a basic knowledge of JavaScript. Basic Knowledge means you should know the basic functions and Syntax's.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+First you need to download the latest verison of [Node.js](https://nodejs.org/en/) after installing, if you want to check if node.js is installed in your computer or not. go to the search bar and type `CMD` open it and type `node --version` in the terminal it should show you the latest verison which you installed.
+Second you need a code editor i recommend you [Visual Studio Code](https://code.visualstudio.com/download).
 
 ```
 Give examples
