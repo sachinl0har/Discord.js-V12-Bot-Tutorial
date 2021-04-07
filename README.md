@@ -20,9 +20,8 @@ Go to [Discord Developer Portal](https://discord.com/developers/applications) An
 Make a folder where you want to store all your bot files. Open CMD with that Folder location and type `npm init` This will create a `package.json` file in your directory.Then open Visual Studio Code with that Directory.then make a file with your main file name, in my case its `alpha.js` then type this code 
 ```js
 // IMPORT MAIN FILES AND PACKAGES WHICH IS REQUIRED.
-
 const Discord = require('discord.js');
-const config = require('./configs/config.json'); // AS YOU SEE YOU HAVE TO MAKE A FOLDER NAMED `configs` AND IN THAT FOLDER MAKE `config.json` FILE. CODE WILL BE GIVEN BELOW.
+const config = require('./configs/config.json'); // AS YOU SEE YOU HAVE TO MAKE A FOLDER NAMED `configs` AND IN THAT FOLDER MAKE `config.json` FILE. CODE WILL BE GIVEN ABOVE.
 const fs = require('fs');
 const db = require('quick.db');
 const path = require("path");
@@ -42,6 +41,16 @@ client.on('ready', async() => {
     console.log('Alpha Started!');
 });
 client.login(config.token)
+```
+
+Config File
+```js
+  
+{
+    "prefix": "your prefix here",    
+    "dev": "736977089307345004", // DEVELOEPRS ID HERE      
+    "token": "bot token here"     
+}
 ```
 
 ### Break down into end to end tests
