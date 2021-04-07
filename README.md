@@ -45,7 +45,6 @@ client.login(config.token)
 
 Config File
 ```js
-  
 {
     "prefix": "your prefix here",    
     "dev": "736977089307345004", // DEVELOEPRS ID HERE      
