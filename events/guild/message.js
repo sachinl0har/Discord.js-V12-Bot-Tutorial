@@ -7,15 +7,6 @@ module.exports = async (client, message) => {
     let prefix = config.prefix
     try{
         if (message.author.bot || message.channel.type === "dm") return;
-
-        if((message.content === "<@767223932884353044>") || (message.content === "<@!767223932884353044>")){
-      message.channel.send({ embed:{
-        title: `AcroNoid`,
-        description: `My Prefix is \`>\` \n\n [WEBSITE](https://www.acronoid.ml) | [SUPPORT SERVER](https://discord.com/invite/Xqw2akR) | [VOTE ACRO](https://top.gg/bot/767223932884353044/vote)`,
-        color: '#ff0000'
-      }})
-        }
-
         if(!message.content.startsWith(prefix)) return;
 
     
@@ -35,20 +26,9 @@ module.exports = async (client, message) => {
         var commandfile = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
         if (commandfile) commandfile.run(client, message, args);
 
-        const commandembed = new Discord.MessageEmbed()
-			.setColor('RANDOM')
-			.setTitle('A Command was used!')
-			.addField('Command user :', `\`\`\`${message.author.tag}\`\`\``)
-			.addField('Command user ID :', `\`\`\`${message.author.id}\`\`\``)
-			.addField('Command ran :', `\`\`\`${cmd}\`\`\``)
-			.addField('Guild name :', `\`\`\`${message.guild.name}\`\`\``)
-			.addField('Guild ID :', `\`\`\`${message.guild.id}\`\`\``);
-		client.channels.cache.get("823471879225344010").send(commandembed);
         
     } catch (error) {
-        await client.channels.cache.get("823471954262098000").send({embed:{
-          description: error,
-          color: 'RED',
+        console.log(error);
         }});
     }
 
