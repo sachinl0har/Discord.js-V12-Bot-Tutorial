@@ -1,0 +1,20 @@
+const { PREFIX } = require('../../configs/config.json');
+const moment = require('moment');
+const chalk = require("chalk")
+
+module.exports = async client => {
+    let totalUsers = client.guilds.cache.reduce((users , value) => users + value.memberCount, 0);
+    let totalGuilds = client.guilds.cache.size
+    let totalChannels = client.channels.cache.size
+
+    console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Active, Commands Loaded!`);
+    console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} Logged In!`);
+    client.user.setPresence({ activity: { name: `>help | ${totalUsers} Users`, type: "PLAYING" }, status: "online" });
+    console.log(chalk.blue`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Now ` + totalChannels + ` channels, ` + totalGuilds + ` Servers and ` + totalUsers + ` serving  users!`);
+
+
+    await client.channels.cache.get("823471954262098000").send(chalk.red`BOT: Active, Commands Loaded!`);
+    await client.channels.cache.get("823471954262098000").send(chalk.red`BOT: ${client.user.username} Logged In!`);
+    client.user.setPresence({ activity: { name: `>help | ${totalUsers} Users`, type: "PLAYING" }, status: "online" });
+    await client.channels.cache.get("823471954262098000").send(chalk.blue`BOT: Now ` + totalChannels + ` channels, ` + totalGuilds + ` Servers and ` + totalUsers + ` serving  users!`);
+}
