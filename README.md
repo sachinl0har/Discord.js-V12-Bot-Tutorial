@@ -93,5 +93,24 @@ let totalUsers = client.guilds.cache.reduce((users , value) => users + value.mem
     let totalChannels = client.channels.cache.size
     client.user.setPresence({ activity: { name: `${totalUsers} Users | ${totalGuilds} Servers | ${totalChannels} Channels`, type: "PLAYING" }, status: "online" });
  ```
+ 
+ ### Command Structure
+```js
+const Discord = require('discord.js');
+const config = require('../../configs/config.json');
+module.exports = {
+    config: {
+        name: '',
+        description: '',
+        aliases: [""],
+        usage: '',
+        accessableby: "",
+    },
+    run: async (client, message, args) => {
+     // PROCESSING CODE HERE
+    }
+}
+```
+
 
 ## More Advanced commands will be added soon stay tunned and follow. And if this was helpfull i will be glad if you give it a Star.
