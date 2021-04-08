@@ -52,20 +52,38 @@ Config File
 }
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+### Command Handler
+command.js // READ FILES INSIDE COMMANDS FOLDER
+```js
+const fs = require('fs');
+module.exports = (client) => {
+    const load = dirs => {
+        const commands = fs.readdirSync(`./commands/${dirs}/`).filter(cmd => cmd.endsWith('.js'));
+        for (let cmd of commands) {
+            let pull = require(`../commands/${dirs}/${cmd}`);
+            client.commands.set(pull.config.name, pull);
+            if (pull.config.aliases) pull.config.aliases.forEach(cmd => client.aliases.set(cmd, pull.config.name));
+        };
+    };
+    ["Folder Names Inside Commands folder"].forEach(cmd => load(cmd));
+};
 ```
-Give an example
-```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+### Event Handler
+event.js // READ EVENT FILES    
+```js
+const fs = require('fs');
+module.exports = (client) => {
+    const load = dirs => {
+        const events = fs.readdirSync(`./events/${dirs}`).filter(events => events.endsWith('.js'));
+        for (let file of events) {
+            const events = require(`../events/${dirs}/${file}`);
+            let eventName = file.split('.')[0];
+            client.on(eventName, events.bind(null,client));
+        };
+    };
+    ['client', 'guild'].forEach(events => load(events));
+};
 ```
 
 ## Deployment
