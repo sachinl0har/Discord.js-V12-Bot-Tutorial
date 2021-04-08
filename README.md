@@ -86,4 +86,12 @@ module.exports = (client) => {
 };
 ```
 
+### Bot Status and Activity
+```js
+let totalUsers = client.guilds.cache.reduce((users , value) => users + value.memberCount, 0);
+    let totalGuilds = client.guilds.cache.size
+    let totalChannels = client.channels.cache.size
+    client.user.setPresence({ activity: { name: `${totalUsers} Users | ${totalGuilds} Servers | ${totalChannels} Channels`, type: "PLAYING" }, status: "online" });
+ ```
+
 ## More Advanced commands will be added soon stay tunned and follow. And if this was helpfull i will be glad if you give it a Star.
