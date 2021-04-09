@@ -7,6 +7,7 @@ const fs = require('fs');
 const db = require('quick.db');
 
 const path = require("path");
+var chatbot = new alexa("chat bot api");
 
 
 const client = new Discord.Client();
