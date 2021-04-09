@@ -94,7 +94,7 @@ let totalUsers = client.guilds.cache.reduce((users , value) => users + value.mem
     client.user.setPresence({ activity: { name: `${totalUsers} Users | ${totalGuilds} Servers | ${totalChannels} Channels`, type: "PLAYING" }, status: "online" });
  ```
  
- ### Command Structure
+### Command Structure
 ```js
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
@@ -110,6 +110,26 @@ module.exports = {
      // PROCESSING CODE HERE
     }
 }
+```
+
+### ChatBot Feature
+```
+var chatbot = new alexa("chat bot api"); //YOUR CHATBOT API HERE
+```
+
+```js
+client.on("message", async message => {
+        let sChannel = db.fetch(`chatbot_${message.guild.id}`);
+        if (sChannel === null) {
+            return;
+          }
+            if (message.author.bot && message.author.discriminator !== '0000') return;
+            if(message.channel.id === sChannel){
+                let content = message.content;
+                if(!content) return;
+                    chatbot.getReply(content).then(r => client.channels.cache.get(sChannel).send(r));
+            }
+         });
 ```
 
 
