@@ -27,5 +27,20 @@ client.on('ready', async() => {
     console.log('Alpha Started!');
 });
 
+//CHATBOT FEATURE 
+
+client.on("message", async message => {
+        let sChannel = db.fetch(`chatbot_${message.guild.id}`);
+        if (sChannel === null) {
+            return;
+          }
+            if (message.author.bot && message.author.discriminator !== '0000') return;
+            if(message.channel.id === sChannel){
+                let content = message.content;
+                if(!content) return;
+                    chatbot.getReply(content).then(r => client.channels.cache.get(sChannel).send(r));
+            }
+         });
+
 
 client.login(config.token)
