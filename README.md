@@ -112,7 +112,7 @@ module.exports = {
 }
 ```
 
-### ChatBot Feature
+### ChatBot Feature For a Specific Channel
 ```
 var chatbot = new alexa("chat bot api"); //YOUR CHATBOT API HERE
 ```
