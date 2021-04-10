@@ -2,6 +2,7 @@
 # Discord.js-Tutorial
 
 Here is a Discord.js Bot Tutorial.
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)]
 
 ## Getting Started
 
