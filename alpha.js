@@ -26,10 +26,10 @@ client.filters = require('./configs/filters.json');
 
 client.categories = fs.readdirSync('./commands');
 
-fs.readdir('./player-events/', (err, files) => {
+fs.readdir('./player/', (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
-        const event = require(`./player-events/${file}`);
+        const event = require(`./player/${file}`);
         let eventName = file.split(".")[0];
         console.log(`Loading player event ${eventName}`);
         client.player.on(eventName, event.bind(null, client));
