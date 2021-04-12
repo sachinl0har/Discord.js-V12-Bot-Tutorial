@@ -21,7 +21,7 @@ module.exports = {
                 client.player.setLoopMode(message, true);
                 return message.channel.send(`${client.emotes.success} - Repeat mode **enabled** the whole queue will be repeated endlessly !`);
             };
-        } else if{
+        } else {
             if (client.player.getQueue(message).repeatMode) {
                 client.player.setRepeatMode(message, false);
                 return message.channel.send(`${client.emotes.success} - Repeat mode **disabled** !`);
