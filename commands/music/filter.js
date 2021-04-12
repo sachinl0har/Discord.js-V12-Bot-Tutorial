@@ -1,9 +1,9 @@
 module.exports = {
     config: {
-        name: "clear-queue",
+        name: "filters",
         aliases: [],
         category: "music",
-        description: "Deletes the next music in queue",
+        description: "",
         usage: "",
         accessableby: ""
     },
