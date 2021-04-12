@@ -1,10 +1,13 @@
 module.exports = {
-    name: 'queue',
-    aliases: [],
-    category: 'Music',
-    utilisation: '{prefix}queue',
-
-    execute(client, message) {
+    config: {
+        name: "queue",
+        aliases: [],
+        category: "music",
+        description: "Shows the next Music songs ",
+        usage: "",
+        accessableby: ""
+    },
+    run: async (client, message, args) => {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
         if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${client.emotes.error} - You are not in the same voice channel !`);
