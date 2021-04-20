@@ -4,7 +4,7 @@ const { owners } = require("../../configs/config.json")
 
 module.exports = {
     config: {
-        name: '',
+        name: 'eval',
         description: '',
         aliases: [""],
         usage: '',
@@ -80,6 +80,7 @@ await msg.edit(embed)
                         
                     
   }
+}
 }
           
                
