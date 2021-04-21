@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js')
 const config = require('../../configs/config.json');
 const fetch = require('node-fetch')
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -34,7 +35,7 @@ module.exports = {
 
 		try{
 			const embed = new MessageEmbed()
-				.setColor('RANDOM')
+				.setColor(embedcolor)
 				.setTitle(`${response.login}`)
 				.addFields(
 					{ name: 'Followers', value: `${response.followers.toLocaleString()}` },
