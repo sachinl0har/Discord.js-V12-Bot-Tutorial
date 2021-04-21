@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js')
 const config = require('../../configs/config.json');
-
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -15,7 +15,7 @@ module.exports = {
         const embed = new MessageEmbed()
     const latency = `\`\`\`ini\n[ ${bot.ws.ping}ms ]\`\`\``;
     embed.setTitle(`Pong!`)
-      .setColor('RANDOM')
+      .setColor(embedcolor)
       .addField('Latency', latency, true)
       .setTimestamp();
     message.channel.send(embed);
