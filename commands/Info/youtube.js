@@ -3,6 +3,8 @@ const config = require('../../configs/config.json');
 const { YTSearcher } = require('ytsearcher');
 const cnf = require('../../configs/config.json');
 const searcher = new YTSearcher(cnf.api);
+const { embedcolor } = require('../../configs/config.json')
+
 module.exports = {
     config: {
         name: 'youtube',
