@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { embedcolor } = require('../../configs/config.json')
+
 
 module.exports = {
     config: {
