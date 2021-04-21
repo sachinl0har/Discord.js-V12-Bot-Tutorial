@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-const bot = new Client();
+const bot = new Discord.Client();
 
 module.exports = {
     config: {
