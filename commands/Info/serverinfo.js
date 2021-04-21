@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -15,7 +15,7 @@ module.exports = {
       let serverinfoembed = new Discord.MessageEmbed()
 
     .setTitle(`SERVERINFO OF __${server.name}__`)
-    .setColor('RANDOM')
+    .setColor(embedcolor)
     .setThumbnail(server.iconURL({dynamic:true}))
     .addField(`Owner: `,`${server.owner}(ID:${server.ownerID})`,true)
     .addField(`REGION: `,`${server.region}`,true)
