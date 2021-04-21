@@ -29,7 +29,7 @@ module.exports = async (client, message) => {
         
     } catch (error) {
         console.log(error);
-        }});
+        ;
     }
 
     
