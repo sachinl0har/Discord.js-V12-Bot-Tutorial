@@ -1,3 +1,5 @@
+const { embedcolor } = require('../../configs/config.json')
+
 module.exports = {
     config: {
         name: "np",
@@ -21,7 +23,7 @@ module.exports = {
 
         message.channel.send({
             embed: {
-                color: 'RED',
+                color: embedcolor,
                 author: { name: track.title },
 
                 fields: [
