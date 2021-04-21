@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -16,7 +16,7 @@ if(!therole) return message.reply(`No Role Mentioned !`)
 
 let theroleembed = new Discord.MessageEmbed()
 .setTitle(`Roleinfo OF  __${therole.name}__ ✔️ `)
-.setColor('RANDOM')
+.setColor(embedcolor)
 .addField(`Name`,`${therole.name}`)
 .addField(`Role Id`,`${therole.id}`)
 .addField(`Color`,`${therole.hexColor}`)
