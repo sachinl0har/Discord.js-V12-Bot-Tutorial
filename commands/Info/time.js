@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -13,7 +14,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
     const pEmbed = new MessageEmbed()
-			.setColor('RANDOM')
+			.setColor(embedcolor)
 			.addField('Today is', `${moment(Date.now()).format('dddd, MMMM Do YYYY, h:mm:ss a')}`);
 		message.channel.send(pEmbed);
     }
