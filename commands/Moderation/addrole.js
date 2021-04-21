@@ -77,3 +77,4 @@ await bandelog.forEach(n=>n.roles.add(role,`Responsible Moderator : ${message.au
 message.reply(`Added \`${role.name}\` To ${bandelog.size} Users`)
     }
 }
+}
