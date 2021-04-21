@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
+const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
     config: {
@@ -28,7 +28,7 @@ module.exports = {
     )
     .setTimestamp()
     .setFooter('AcroNoid')
-    .setColor('RANDOM');
+    .setColor(embedcolor);
     message.channel.send(embed)
     }
 }
