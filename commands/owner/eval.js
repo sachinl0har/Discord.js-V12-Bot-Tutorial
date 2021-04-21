@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
+const { embedcolor } = require('../../configs/config.json')
 
 
 module.exports = {
@@ -32,7 +32,7 @@ module.exports = {
             message.channel.send({embed:{
               title: "EVAL",
               description: `\`\`\`js\n${output}\`\`\``,
-              color: 'RANDOM'
+              color: embedcolor
             }});  
         }).catch((err) => {
             err = err.toString();
