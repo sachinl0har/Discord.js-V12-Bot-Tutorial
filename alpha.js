@@ -7,6 +7,7 @@ const fs = require('fs');
 const db = require('quick.db');
 
 const path = require("path");
+const alexa = require("alexa-bot-api");
 var chatbot = new alexa("chat bot api");
 
 
