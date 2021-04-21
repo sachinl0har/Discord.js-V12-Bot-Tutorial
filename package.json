@@ -1,0 +1,33 @@
+{
+  "name": "Discordjs-V12-Bot-Tutorial",
+  "version": "1.0.0",
+  "description": "Discord.JS V12 Tutorial",
+  "main": "alpha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachinl0har/Discord.js-V12-Bot-Tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachinl0har/Discord.js-V12-Bot-Tutorial/issues"
+  },
+  "homepage": "https://github.com/sachinl0har/Discord.js-V12-Bot-Tutorial#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.0",
+    "alexa-bot-api": "^2.0.1",
+    "chalk": "^4.1.0",
+    "discord-player": "^3.4.0",
+    "discord.js": "^12.5.3",
+    "ffmpeg-static": "^4.3.0",
+    "moment": "^2.29.1",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
+    "quick.db": "^7.1.3",
+    "ytsearcher": "^1.2.4"
+  }
+}
