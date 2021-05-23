@@ -7,6 +7,11 @@ module.exports = async (client, message) => {
     let prefix = config.prefix
     try{
         if (message.author.bot || message.channel.type === "dm") return;
+        
+        if((message.content === "<@767223932884353044>") || (message.content === "<@!767223932884353044>")){
+      message.channel.send(`My Prefix is ${config.prefix}`)
+        }
+        
         if(!message.content.startsWith(prefix)) return;
 
     
