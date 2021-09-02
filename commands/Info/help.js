@@ -31,7 +31,7 @@ module.exports = {
             if (!command) return message.channel.send(embed.setTitle("**Invalid Command!**").setDescription(`**Do \`${prefix}help\``))
             command = command.config
 
-            embed.setDescription(stripIndents`**AcroNoid Prefix ${prefix}`**\n
+            embed.setDescription(stripIndents`**AcroNoid Prefix ${prefix}**\n
             ** Command -** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}\n
             ** Description -** ${command.description || "No Description provided."}\n
             ** Aliases -** ${command.aliases ? command.aliases.join(", ") : "None."}`)
